@@ -1,6 +1,6 @@
 {
   "name": "@suwatte/validate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Zod Schemas mapped to Suwatte Classes which are used to validate generated responses from Runner Classes",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,11 +17,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.0.4"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@suwatte/daisuke": "^2.0.1",
-    "zod": "^3.21.4"
+    "@suwatte/daisuke": "^3.0.5",
+    "zod": "^3.22.2"
   },
   "files": [
     "/dist"
