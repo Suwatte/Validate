@@ -19,3 +19,4 @@ export * from "./PagedResult";
 export * from "./Property";
 export * from "./ReaderContext";
 export * from "./Tracker";
+export * from "./Badge";

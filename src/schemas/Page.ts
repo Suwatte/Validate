@@ -1,20 +1,9 @@
 import { z } from "zod";
-import { DirectoryRequestSchema } from "./DirectoryRequest";
-import { BadgeSchema, HighlightSchema } from "./Highlight";
+import { HighlightSchema } from "./Highlight";
 import { URLSchema } from "./BaseItem";
 import { SectionStyle } from "@suwatte/daisuke";
-import { ContextProviderSchema } from "./ContextProvider";
-
-export const PageLinkSchema = z
-  .object({
-    id: z.string().min(1),
-  })
-  .and(ContextProviderSchema);
-
-export const LinkableSchema = z.union([
-  z.object({ page: PageLinkSchema }),
-  z.object({ request: DirectoryRequestSchema }),
-]);
+import { BadgeSchema } from "./Badge";
+import { LinkableSchema } from "./PageLink";
 
 export const PageLinkLabelSchema = z.object({
   title: z.string().min(1),
@@ -29,7 +18,7 @@ export const PageSectionSchema = z.object({
   title: z.string().min(1),
   subtitle: z.string().min(1).optional(),
   viewMoreLink: LinkableSchema.optional(),
-  items: HighlightSchema.array().optional(),
+  items: HighlightSchema.array().nonempty().optional(),
   style: z.nativeEnum(SectionStyle).optional(),
 });
 

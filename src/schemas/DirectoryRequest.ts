@@ -30,7 +30,7 @@ export const DirectoryRequestSchema = z.object({
   query: z.string().optional(),
   page: z.number().nonnegative(),
   sort: SortSelectionSchema.optional(),
-  filters: PopulatedFilterSchema,
+  filters: PopulatedFilterSchema.optional(),
   tag: DRTagSchema.optional(),
   configID: z.string().optional(),
 });

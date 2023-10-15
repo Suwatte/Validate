@@ -1,7 +1,7 @@
 {
   "name": "@suwatte/validate",
-  "version": "2.0.0",
-  "description": "Zod Schemas mapped to Suwatte Classes which are used to validate generated responses from Runner Classes",
+  "version": "3.0.0",
+  "description": "Zod Schemas mapped Suwatte Types",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "dpdm": "^3.14.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {

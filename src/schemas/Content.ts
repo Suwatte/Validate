@@ -8,7 +8,7 @@ import { PropertySchema } from "./Property";
 const IContentSchema = z.object({
   status: z.nativeEnum(PublicationStatus).optional(),
   creators: z.string().min(1).array().optional(),
-  summary: z.string().min(1).array().optional(),
+  summary: z.string().min(1).optional(),
   additionalTitles: z.string().min(1).array().optional(),
   properties: PropertySchema.array().optional(),
   contentType: z.nativeEnum(ContentType).optional(),

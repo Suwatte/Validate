@@ -1,19 +1,8 @@
-import { PublicationStatus, TrackStatus } from "@suwatte/daisuke";
+import { PublicationStatus } from "@suwatte/daisuke";
 import { z } from "zod";
 import { PropertySchema } from "./Property";
 import { URLSchema } from "./BaseItem";
 import { HighlightSchema } from "./Highlight";
-
-export const TrackProgressSchema = z.object({
-  lastReadChapter: z.number().nonnegative(),
-  maxAvailableChapter: z.number().nonnegative().optional(),
-  lastReadVolume: z.number().nonnegative().optional(),
-});
-
-export const TrackEntrySchema = z.object({
-  status: z.nativeEnum(TrackStatus),
-  progress: TrackProgressSchema,
-});
 
 const IFullTrackItemSchema = z.object({
   summary: z.string().min(1).optional(),

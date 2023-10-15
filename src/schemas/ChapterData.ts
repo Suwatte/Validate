@@ -10,5 +10,5 @@ export const ChapterPageSchema = z.object({
 });
 
 export const ChapterDataSchema = z.object({
-  pages: ChapterPageSchema.array(),
+  pages: ChapterPageSchema.array().nonempty("Page List cannot not be empty"),
 });
